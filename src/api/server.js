@@ -139,9 +139,9 @@ export const handlers = [
 
     if (data.content === 'error') {
       return res(
-        ctx.delay(ARTIFICIAL_DELAY_MS),
-        ctx.status(500),
-        ctx.json('Server error saving this post!')
+          ctx.delay(ARTIFICIAL_DELAY_MS),
+          ctx.status(500),
+          ctx.json('Server error saving this post!')
       )
     }
 
@@ -167,8 +167,8 @@ export const handlers = [
       data,
     })
     return res(
-      ctx.delay(ARTIFICIAL_DELAY_MS),
-      ctx.json(serializePost(updatedPost))
+        ctx.delay(ARTIFICIAL_DELAY_MS),
+        ctx.json(serializePost(updatedPost))
     )
   }),
 
@@ -177,8 +177,8 @@ export const handlers = [
       where: { id: { equals: req.params.postId } },
     })
     return res(
-      ctx.delay(ARTIFICIAL_DELAY_MS),
-      ctx.json({ comments: post.comments })
+        ctx.delay(ARTIFICIAL_DELAY_MS),
+        ctx.json({ comments: post.comments })
     )
   }),
 
@@ -200,17 +200,17 @@ export const handlers = [
     })
 
     return res(
-      ctx.delay(ARTIFICIAL_DELAY_MS),
-      ctx.json(serializePost(updatedPost))
+        ctx.delay(ARTIFICIAL_DELAY_MS),
+        ctx.json(serializePost(updatedPost))
     )
   }),
   rest.get('/fakeApi/notifications', (req, res, ctx) => {
     const numNotifications = getRandomInt(1, 5)
 
     let notifications = generateRandomNotifications(
-      undefined,
-      numNotifications,
-      db
+        undefined,
+        numNotifications,
+        db
     )
 
     return res(ctx.delay(ARTIFICIAL_DELAY_MS), ctx.json(notifications))
@@ -300,3 +300,4 @@ function generateRandomNotifications(since, numNotifications, db) {
 
   return notifications
 }
+
