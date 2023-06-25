@@ -1,10 +1,5 @@
-import {
-    createSlice,
-    createAsyncThunk,
-    createEntityAdapter,
-} from '@reduxjs/toolkit'
-import {client} from "../../api/client";
-
+import {client} from "../../api/client"
+import {createAsyncThunk, createEntityAdapter, createSlice} from "@reduxjs/toolkit";
 
 const usersAdapter = createEntityAdapter()
 
@@ -25,11 +20,6 @@ const usersSlice = createSlice({
 })
 
 export default usersSlice.reducer
-
-// export const selectAllUsers = state => state.users
-//
-// export const selectUserById = (state, userId) =>
-//     state.users.find(user => user.id === userId)
 
 export const {
     selectAll: selectAllUsers,

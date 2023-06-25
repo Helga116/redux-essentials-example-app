@@ -5,16 +5,14 @@ import {
     Route,
     Redirect,
 } from 'react-router-dom'
-
-import { NotificationsList } from './features/notifications/NotificationsList'
-import {UsersList} from "./features/users/UsersList";
-import {UserPage} from "./features/users/UserPage";
+import {Navbar} from './app/Navbar'
 import {AddPostForm} from "./features/posts/AddPostForm";
 import {PostsList} from "./features/posts/postsList";
 import {SinglePostPage} from "./features/posts/singlePostPage";
 import {EditPostForm} from "./features/posts/editPostForm";
-import {Navbar} from "./app/Navbar";
-
+import {UsersList} from "./features/users/UsersList"
+import {UserPage} from "./features/users/UserPage"
+import {NotificationsList} from "./features/notifications/NotificationsList"
 export function App() {
     return (
         <Router>

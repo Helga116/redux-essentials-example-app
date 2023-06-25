@@ -1,10 +1,5 @@
-import {
-    createSlice,
-    createAsyncThunk,
-    createSelector,
-    createEntityAdapter,
-} from '@reduxjs/toolkit'
 import { client } from '../../api/client'
+import {createAsyncThunk, createEntityAdapter, createSelector, createSlice} from "@reduxjs/toolkit";
 
 const postsAdapter = createEntityAdapter({
     sortComparer: (a, b) => b.date.localeCompare(a.date),

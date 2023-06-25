@@ -3,8 +3,7 @@ import {
     createAsyncThunk,
     createEntityAdapter,
 } from '@reduxjs/toolkit'
-
-import { client } from '../../api/client'
+import {client} from "../../api/client"
 
 const notificationsAdapter = createEntityAdapter({
     sortComparer: (a, b) => b.date.localeCompare(a.date),
